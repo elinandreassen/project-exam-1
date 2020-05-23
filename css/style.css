@@ -441,7 +441,6 @@ tbody {
 .upcoming,
 .previous {
   padding-top: 60px;
-  text-align: center;
   color: black;
 }
 
@@ -525,17 +524,18 @@ span {
 .contactcontent {
   padding: 20px;
   text-align: center;
-  font-family: "Open Sans";
-  color: white;
+  color: #8de0f2;
   text-transform: uppercase;
 }
 
 #contactForm {
-  background-color: #0d1a26;
+  border: solid 1px white;
   padding: 50px;
   text-align: left;
   max-width: 500px;
   margin: 0 auto;
+  color: white;
+  font-family: "Open Sans";
 }
 
 input {
@@ -554,15 +554,17 @@ input {
 }
 
 .formbtn {
-  margin-top: 40px;
-  padding: 15px;
-  border: none;
+  font-family: "Orbitron";
+  border: 2px solid white;
   border-radius: 8px;
+  text-align: center;
   text-transform: uppercase;
-  font-weight: bolder;
-  background-color: rgba(32, 63, 89, 0.692);
+  font-weight: bold;
+  width: 170px;
+  padding: 10px;
+  margin-top: 30px;
+  background-color: rgba(20, 20, 20, 0.616);
   color: #6cafd9;
-  box-shadow: 0 5px 6px #000000;
 }
 
 .formbtn:hover {
@@ -756,6 +758,15 @@ input {
   .bannercontainer {
     padding-bottom: 450px;
   }
+
+    /*------------------ CONTACT PAGE ------------------*/
+  .contactcontent h2 {
+    font-size: 30px;
+  }
+
+  .contactcontent h3 {
+    font-size: 25px;
+  }
 }
 
 /*------------------ BIG SCREENS ------------------*/
@@ -802,7 +813,7 @@ input {
   }
 
   .title {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .rocketicon {
@@ -948,6 +959,15 @@ input {
   /*------------ LAUNCHES, IMAGE-GALLERY, ABOUT, CONTACT - COMMON ---------*/
   .bannercontainer {
     padding-bottom: 400px;
+  }
+
+  /*------------------ CONTACT PAGE ------------------*/
+  .contactcontent h2 {
+    font-size: 40px;
+  }
+
+  .contactcontent h3 {
+    font-size: 30px;
   }
 }
 
