@@ -12,24 +12,21 @@ fetch(url)
     console.log(error);
   });
 
-function getnextLaunch(nextLaunch) {
-    launchCountdown(nextLaunch[0]);
-}
 
-
-function launchCountdown(json) {
+function getnextLaunch(json) {
   console.dir(json)
+  let launchDate = json[0];
 
-  setInterval(() => {
+    setInterval(function() {
+    const now = Math.floor(new Date().getTime());
     let countDistance = "";
     let days = "";
     let hours = "";
     let minutes = "";
     let seconds = "";
-    const now = Math.floor(new Date().getTime());
 
-    countDistance = json.launch_date_unix*1000 - now;
-    days = Math.floor(countDistance / (1000 * 60 * 60 * 24 ));
+    countDistance = launchDate.launch_date_unix*1000 - now;
+    days = Math.floor(countDistance / (1000 * 60 * 60 * 24)/7); 
     hours = Math.floor((countDistance % (1000 * 60 * 60)) / (1000 * 60 * 60));
     minutes = Math.floor((countDistance % (1000 * 60 * 60)) / (1000 * 60));
     seconds = Math.floor((countDistance % (1000 * 60)) / 1000);
