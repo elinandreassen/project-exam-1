@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="Elin Andreassen"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <script src="https://kit.fontawesome.com/60dde5093a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="launches.html">Launches</a></li>
+                <li><a href="rockets.html">Rockets</a></li>
+                <li><a href="imggallery.html">Gallery</a></li>
+                <li><a class="current" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobilenav">
+          <button id="menuburger"><i class="fas fa-bars"></i></button>
+          <nav id="mobile">
+              <button id="menuburgerclose"><i class="fas fa-times"></i></button>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="launches.html">Launches</a></li>
+              <li><a href="rockets.html">Rockets</a></li>
+              <li><a href="imggallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </nav>
+        </div>
+    </header>
+    <main>
+       <div class="bannercontainer">
+            <div class="ctatxt">
+                <h1>CONTACT US</h1>
+            </div>
+       </div>
+       <section class="contactcontent">
+         <h2>Got a question?</h2>
+         <h3>Leave us a message!</h3>
+         <form id="contactForm">
+           <div class="formSection">
+              <label for="firstName">First Name</label>
+              <input name="firstName" id="firstName" placeholder="First name here*"/>
+              <div class="formError" id="firstNameError">Please enter your first name</div>
+           </div>
+           <div class="formSection">
+             <label for="lastName">Last Name</label>
+             <input name="lastName" id="lastName" placeholder="Last name here *"/>
+             <div class="formError" id="lastNameError">Please enter your first name</div>
+           </div>
+           <div class="formSection">
+             <label for="email">Email</label>
+             <input name="email" id="email" placeholder="Email here *"/>
+             <div class="formError" id="emailError">Please enter your email address</div>
+             <div class="formError" id="invalidEmailError">Please enter a valid email address</div>
+           </div>
+           <div class="formSection">
+             <label for="message">Message</label>
+             <input name="message" id="message" placeholder="Write your message here *"/>
+             <div class="formError" id="messageError">Please enter a message</div>
+           </div>
+           <button type="submit" class="formbtn" id="submit">Submit Message</button>
+         </form>
+       </section>
+       <div class="totop">
+          <a href="#"><i class="fas fa-arrow-up"></i></a>
+       </div>
+    </main>
+    <footer>
+      <div class="footercontainer">
+        <div class="footercol">
+          <h4>Useful Links</h4>
+          <ul class="links">
+            <li><a href="https://www.spacex.com/">SpaceX</a></li>
+            <li><a href="https://www.spacex.com/careers">Careers</a></li>
+            <li><a href="https://www.nasa.gov/">Nasa</a></li>
+            <li><a href="https://www.space.com/news">Space News</a></li>
+          </ul>
+        </div>
+        <div class="some">
+          <h4>Social Media</h4>
+          <ul class="somelinks">
+            <li><a href="https://www.flickr.com/photos/spacex"><i class="fab fa-flickr"></i></a></li>
+            <li><a href="https://twitter.com/SpaceX"><i class="fab fa-twitter-square"></i></a></li>
+            <li><a href="https://www.youtube.com/user/spacexchannel"><i class="fab fa-youtube-square"></i></a></li>
+            <li><a href="https://www.instagram.com/spacex/"><i class="fab fa-instagram-square"></i></a></li>
+         </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/contact.js"></script>
+    <script src="../js/mobilenav.js"></script>
+</body>
+</html>

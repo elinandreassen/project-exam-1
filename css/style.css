@@ -1,0 +1,962 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", "Open Sans", sans-serif;
+  background-color: black;
+  scroll-behavior: smooth;
+}
+
+main {
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(20, 20, 20, 0.616);
+}
+
+p {
+  font-family: "Open Sans";
+}
+
+.statement {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.521);
+    font-size: 10px;
+}
+
+/*------------------ NAVIGATION ------------------*/
+nav {
+  display: none;
+  justify-content: center;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  display: block;
+  font-size: 16px;
+  text-decoration: none;
+  padding-top: 10px;
+  text-align: center;
+  transition-duration: 0.5s;
+}
+
+li:hover {
+  transform: scale(1.2);
+}
+
+a {
+  text-decoration: none;
+  color: #8de0f2;
+}
+
+.current {
+  border-bottom-style: dashed;
+  border-width: 2px;
+  font-weight: bold;
+}
+
+/*------------------ MOBILE NAVIGATION ------------------*/
+#menuburger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  color: #8de0f2;
+}
+
+#menuburgerclose {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  color: #8de0f2;
+  z-index: 1;
+}
+
+#mobilenav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white;
+}
+
+#mobile {
+  display: none;
+  flex-direction: column;
+  background-color: #0d1a26;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+}
+
+#mobile li {
+  padding: 10px;
+}
+
+/*------------------ FOOTER ------------------*/
+footer {
+  background-image: linear-gradient(
+      361deg,
+      rgba(213, 213, 213, 0.01) 0%,
+      rgba(213, 213, 213, 0.01) 14.286%,
+      rgba(140, 140, 140, 0.01) 14.286%,
+      rgba(140, 140, 140, 0.01) 28.572%,
+      rgba(52, 52, 52, 0.01) 28.572%,
+      rgba(52, 52, 52, 0.01) 42.858%,
+      rgba(38, 38, 38, 0.01) 42.858%,
+      rgba(38, 38, 38, 0.01) 57.144%,
+      rgba(159, 159, 159, 0.01) 57.144%,
+      rgba(159, 159, 159, 0.01) 71.42999999999999%,
+      rgba(71, 71, 71, 0.01) 71.43%,
+      rgba(71, 71, 71, 0.01) 85.71600000000001%,
+      rgba(88, 88, 88, 0.01) 85.716%,
+      rgba(88, 88, 88, 0.01) 100.002%
+    ),
+    linear-gradient(
+      495deg,
+      rgba(25, 25, 25, 0.01) 0%,
+      rgba(25, 25, 25, 0.01) 12.5%,
+      rgba(150, 150, 150, 0.01) 12.5%,
+      rgba(150, 150, 150, 0.01) 25%,
+      rgba(84, 84, 84, 0.01) 25%,
+      rgba(84, 84, 84, 0.01) 37.5%,
+      rgba(85, 85, 85, 0.01) 37.5%,
+      rgba(85, 85, 85, 0.01) 50%,
+      rgba(188, 188, 188, 0.01) 50%,
+      rgba(188, 188, 188, 0.01) 62.5%,
+      rgba(80, 80, 80, 0.01) 62.5%,
+      rgba(80, 80, 80, 0.01) 75%,
+      rgba(73, 73, 73, 0.01) 75%,
+      rgba(73, 73, 73, 0.01) 87.5%,
+      rgba(219, 219, 219, 0.01) 87.5%,
+      rgba(219, 219, 219, 0.01) 100%
+    ),
+    linear-gradient(
+      358deg,
+      rgba(233, 233, 233, 0.01) 0%,
+      rgba(233, 233, 233, 0.01) 25%,
+      rgba(114, 114, 114, 0.01) 25%,
+      rgba(114, 114, 114, 0.01) 50%,
+      rgba(164, 164, 164, 0.01) 50%,
+      rgba(164, 164, 164, 0.01) 75%,
+      rgba(228, 228, 228, 0.01) 75%,
+      rgba(228, 228, 228, 0.01) 100%
+    ),
+    linear-gradient(
+      475deg,
+      rgba(139, 139, 139, 0.02) 0%,
+      rgba(139, 139, 139, 0.02) 16.667%,
+      rgba(44, 44, 44, 0.02) 16.667%,
+      rgba(44, 44, 44, 0.02) 33.334%,
+      rgba(166, 166, 166, 0.02) 33.334%,
+      rgba(166, 166, 166, 0.02) 50.001000000000005%,
+      rgba(2, 2, 2, 0.02) 50.001%,
+      rgba(2, 2, 2, 0.02) 66.668%,
+      rgba(23, 23, 23, 0.02) 66.668%,
+      rgba(23, 23, 23, 0.02) 83.33500000000001%,
+      rgba(21, 21, 21, 0.02) 83.335%,
+      rgba(21, 21, 21, 0.02) 100.002%
+    ),
+    linear-gradient(
+      486deg,
+      rgba(3, 3, 3, 0.03) 0%,
+      rgba(3, 3, 3, 0.03) 12.5%,
+      rgba(116, 116, 116, 0.03) 12.5%,
+      rgba(116, 116, 116, 0.03) 25%,
+      rgba(214, 214, 214, 0.03) 25%,
+      rgba(214, 214, 214, 0.03) 37.5%,
+      rgba(217, 217, 217, 0.03) 37.5%,
+      rgba(217, 217, 217, 0.03) 50%,
+      rgba(68, 68, 68, 0.03) 50%,
+      rgba(68, 68, 68, 0.03) 62.5%,
+      rgba(118, 118, 118, 0.03) 62.5%,
+      rgba(118, 118, 118, 0.03) 75%,
+      rgba(200, 200, 200, 0.03) 75%,
+      rgba(200, 200, 200, 0.03) 87.5%,
+      rgba(198, 198, 198, 0.03) 87.5%,
+      rgba(198, 198, 198, 0.03) 100%
+    ),
+    linear-gradient(
+      255deg,
+      rgba(195, 195, 195, 0.03) 0%,
+      rgba(195, 195, 195, 0.03) 16.667%,
+      rgba(177, 177, 177, 0.03) 16.667%,
+      rgba(177, 177, 177, 0.03) 33.334%,
+      rgba(170, 170, 170, 0.03) 33.334%,
+      rgba(170, 170, 170, 0.03) 50.001000000000005%,
+      rgba(158, 158, 158, 0.03) 50.001%,
+      rgba(158, 158, 158, 0.03) 66.668%,
+      rgba(121, 121, 121, 0.03) 66.668%,
+      rgba(121, 121, 121, 0.03) 83.33500000000001%,
+      rgba(146, 146, 146, 0.03) 83.335%,
+      rgba(146, 146, 146, 0.03) 100.002%
+    ),
+    linear-gradient(
+      426deg,
+      rgba(103, 103, 103, 0.03) 0%,
+      rgba(103, 103, 103, 0.03) 25%,
+      rgba(112, 112, 112, 0.03) 25%,
+      rgba(112, 112, 112, 0.03) 50%,
+      rgba(4, 4, 4, 0.03) 50%,
+      rgba(4, 4, 4, 0.03) 75%,
+      rgba(227, 227, 227, 0.03) 75%,
+      rgba(227, 227, 227, 0.03) 100%
+    ),
+    linear-gradient(248deg, hsl(98, 0%, 0%), hsl(98, 0%, 0%));
+  padding: 30px;
+  margin-bottom: 0;
+}
+
+.footercontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  font-size: 15px;
+  color: white;
+}
+
+.footercol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 130px;
+  padding: 10px 40px;
+}
+
+.somelinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 130px;
+  padding: 10px;
+}
+
+.somelinks li {
+  list-style: none;
+  padding: 5px;
+}
+
+.footercol li {
+  list-style: none;
+  padding: 1.5px;
+}
+
+.some,
+.some ul,
+.footercol,
+footercol ul {
+  text-align: center;
+}
+
+.some {
+  border-top: white 2px solid;
+}
+
+/*------------------ FONTAWESOME ICONS ------------------*/
+.fa-flickr,
+.fa-twitter-square,
+.fa-youtube-square,
+.fa-instagram-square,
+.fa-arrow-up {
+  padding: 5px;
+  font-size: 2em;
+}
+
+/*------------------ HOMEPAGE ------------------*/
+.topcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../graphics/heroimage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 150px;
+}
+
+.ctatxt {
+  color: white;
+  font-size: 13px;
+  padding-top: 100px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.CTABUTTON {
+  border: 2px solid white;
+  border-radius: 8px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 170px;
+  padding: 10px;
+  background-color: rgba(20, 20, 20, 0.616);
+}
+
+.CTABUTTON:hover {
+  box-shadow: 0 5px 8px #0d1a26;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
+
+.CTABUTTON a {
+  color: #8de0f2;
+  font-weight: bold;
+}
+
+.icon {
+  text-align: center;
+}
+
+.rocketicon {
+  max-width: 70%;
+  height: auto;
+}
+
+.nextlaunch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.title {
+  font-size: 14px;
+  color: white;
+}
+
+.countdown,
+tbody {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: white;
+}
+
+.numbers {
+  font-size: 25px;
+  color: #8de0f2;
+}
+
+.infocontainer {
+  margin-top: 50px;
+  padding: 15px;
+  letter-spacing: 1px;
+  background-color: #000000;
+  color: white;
+}
+
+.infocontainer h3 {
+  color: #8de0f2;
+}
+
+.infobox1,
+.infobox2,
+.infobox3 {
+  padding: 10px;
+}
+
+.infotext {
+  z-index: +1;
+}
+
+.infoimg {
+  max-width: 100%;
+  height: auto;
+  padding-top: 50px;
+}
+
+.infoimg:hover {
+  transform: scale(1.1);
+  transition: 0.7s ease-in-out;
+  cursor: zoom-in;
+}
+
+.totop {
+  text-align: center;
+}
+
+.fa-arrow-up {
+  color: rgba(255, 255, 255, 0.521);
+}
+
+.fa-arrow-up:hover {
+  color: #8de0f2;
+  transform: scale(1.1);
+  transition: 0.5s ease-in;
+}
+/*------------------ LAUNCHES, IMAGE-GALLERY, ABOUT, CONTACT - COMMON ------------------*/
+.bannercontainer {
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: center;
+  background-image: url(../graphics/bannerimage.jpg);
+  background-size: cover;
+  padding-bottom: 150px;
+  margin-bottom: 30px;
+}
+
+/*------------------ LAUNCHES PAGE ------------------*/
+.launchcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.launchcontainer h2 {
+  color: #8de0f2;
+  text-transform: uppercase;
+}
+
+.launchcontainer h3 {
+  color: #8de0f2;
+  font-size: 15px;
+}
+
+.upcoming,
+.previous {
+  padding-top: 60px;
+  text-align: center;
+  color: black;
+}
+
+.launch {
+  border: 1px white solid;
+  padding: 5px;
+  margin-top: 10px;
+  max-width: 300px;
+  overflow: hidden;
+  color: white;
+  box-shadow: 0 5px 8px #3d3d3d;
+}
+
+span {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #8de0f2;
+}
+
+.scrollbox {
+  margin-top: 10px;
+  height: 800px;
+  overflow-y: scroll;
+}
+
+/*------------------ IMAGE-GALLERY ------------------*/
+.imggallery {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galleryimg {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+/*------------------ ROCKETS PAGE ------------------*/
+.rocketcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.rocketcard {
+  margin-top: 30px;
+  max-width: 300px;
+}
+
+.rocketinfo {
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.rocketinfo h3 {
+  color: #8de0f2;
+}
+
+.rocketimg {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.rocket {
+  max-width: 100%;
+  height: auto;
+}
+
+.rocketlink {
+  border-bottom: 1px solid #8de0f2;
+}
+
+/*------------------ CONTACT PAGE ------------------*/
+.contactcontent {
+  padding: 20px;
+  text-align: center;
+  font-family: "Open Sans";
+  color: white;
+  text-transform: uppercase;
+}
+
+#contactForm {
+  background-color: #0d1a26;
+  padding: 50px;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+}
+
+.formSection {
+  padding-top: 20px;
+}
+
+.formError {
+  display: none;
+  color: #8de0f2;
+  font-size: 16px;
+}
+
+.formbtn {
+  margin-top: 40px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  background-color: rgba(32, 63, 89, 0.692);
+  color: #6cafd9;
+  box-shadow: 0 5px 6px #000000;
+}
+
+.formbtn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/*------------------ SMALL SCREENS ------------------*/
+@media all and (min-width: 450px) {
+  .launch {
+    padding: 20px;
+  }
+}
+
+@media all and (min-width: 500px) {
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav li {
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  #mobilenav {
+    display: none;
+  }
+
+  .topcontainer {
+    padding-bottom: 200px;
+  }
+
+  .ctatxt {
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .CTABUTTON {
+    width: 250px;
+  }
+
+  tbody {
+    font-size: 20px;
+  }
+
+  .rocketcard {
+    margin-top: 30px;
+    max-width: 450px;
+  }
+
+  .galleryimg {
+    max-width: 450px;
+  }
+
+  .bannercontainer {
+    padding-bottom: 300px;
+  }
+}
+
+/*------------------ MEDIUM SCREENS ------------------*/
+@media all and (min-width: 768px) {
+  /*------------------ NAV & FOOTER ------------------*/
+  nav li {
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+  }
+
+  a {
+    font-size: 20px;
+  }
+
+  .footercontainer {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footercol {
+    padding-right: 50px;
+  }
+
+  .somelinks {
+    max-width: 150px;
+    padding: 10px;
+  }
+
+  .some {
+    border-left: white 2px solid;
+    border-top: none;
+    padding-left: 50px;
+  }
+
+  /*------------------ HOMEPAGE ------------------*/
+  .topcontainer {
+    padding-bottom: 250px;
+  }
+
+  .nextlaunch {
+    padding-top: 50px;
+  }
+
+  .ctatxt {
+    font-size: 30px;
+    margin-top: 150px;
+  }
+
+  .CTABUTTON {
+    width: 300px;
+  }
+
+  .infocontainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: black;
+  }
+
+  .infobox1,
+  .infobox2,
+  .infobox3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 50px;
+  }
+
+  .infotext {
+    max-width: 600px;
+  }
+
+  /*------------------ LAUNCHES PAGE ------------------*/
+  .launchcontainer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .upcoming {
+    padding-right: 10px;
+  }
+
+  .previous {
+    padding-left: 10px;
+  }
+
+  .launch {
+    width: 500px;
+    padding: 20px;
+  }
+
+  .scrollbox {
+    margin-top: 10px;
+    height: 800px;
+    overflow-y: scroll;
+    padding: 15px;
+  }
+
+  /*------------------ ROCKETS PAGE ------------------*/
+  .rocketinfo {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    border: 1px solid white;
+    padding: 20px;
+  }
+
+  .rocketcard {
+    margin-top: 30px;
+    max-width: 700px;
+  }
+
+  .rockettext {
+    padding: 20px;
+    max-width: 400px;
+  }
+
+  .rocket {
+    width: 350px;
+    margin-top: 50px;
+  }
+
+  .bannercontainer {
+    padding-bottom: 450px;
+  }
+}
+
+/*------------------ BIG SCREENS ------------------*/
+@media all and (min-width: 1200px) {
+  /*------------------ NAV & FOOTER ------------------*/
+  nav li {
+    display: inline-block;
+    padding: 30px 30px;
+    margin-right: 30px;
+  }
+
+  a {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 30px;
+  }
+
+  .footercontainer {
+    font-size: 20px;
+  }
+
+  .some {
+    padding-left: 50px;
+  }
+
+  .footercol {
+    padding-right: 50px;
+  }
+
+  /*------------------ HOMEPAGE ------------------*/
+  .topcontainer {
+    padding-bottom: 300px;
+  }
+
+  .ctatxt {
+    font-size: 30px;
+    margin-top: 300px;
+  }
+
+  .CTABUTTON {
+    width: 300px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .rocketicon {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .nextlaunch {
+    padding: 100px;
+  }
+
+  tr th {
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .numbers {
+    font-size: 40px;
+  }
+
+  .infocontainer {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 100px;
+  }
+
+  .infobox1,
+  .infobox2,
+  .infobox3 {
+    padding: 50px;
+  }
+
+  .infobox2 {
+    flex-direction: row-reverse;
+  }
+
+  .infotext {
+    max-width: 900px;
+    padding-left: 30px;
+  }
+
+  .infotext h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  .infotext h3 {
+    font-size: 30px;
+  }
+
+  .infotext p {
+    font-size: 20px;
+  }
+
+  /*------------------ LAUNCHES PAGE ------------------*/
+  .launchcontainer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .launchcontainer h2 {
+    font-size: 30px;
+  }
+
+  .launchcontainer h3 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .launch {
+    max-width: 700px;
+    height: 600px;
+    padding: 20px;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .upcoming {
+    padding-right: 20px;
+    text-align: center;
+  }
+
+  .previous {
+    padding-left: 20px;
+    text-align: center;
+  }
+
+  /*------------------ ROCKETS PAGE ------------------*/
+  .rocketcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+  }
+
+  .rocketcard {
+    margin-top: 30px;
+    max-width: 900px;
+  }
+
+  .rocketinfo {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    border: 1px solid white;
+    padding: 20px;
+  }
+
+  .rockettext {
+    padding: 20px;
+    max-width: 400px;
+    font-size: 20px;
+  }
+
+  .rocketimg {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-top: 25px;
+  }
+
+  .rocket {
+    width: 400px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .rocketlink:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  /*------------------ GALLERY PAGE ------------------*/
+  .imggallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /*------------ LAUNCHES, IMAGE-GALLERY, ABOUT, CONTACT - COMMON ---------*/
+  .bannercontainer {
+    padding-bottom: 400px;
+  }
+}
+
+@media all and (min-width: 1800px) {
+  .topcontainer {
+    padding-bottom: 800px;
+  }
+
+  .bannercontainer {
+    padding-bottom: 650px;
+  }
+}
