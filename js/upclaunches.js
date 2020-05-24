@@ -18,7 +18,8 @@ function getLaunches(json){
     let fillUpcL = "";
 
     for (let i = 0; i < json.length; i++) {
-  let details = `
+      // Add HTML
+      let details = `
        <div class="upc-launches">
           <div id="upc" class="launch">
             <h3>${json[i].mission_name}</h3>
@@ -31,8 +32,8 @@ function getLaunches(json){
           </div>
         </div>`;
 
-  fillUpcL += details;
-}
+      fillUpcL += details;
+    }
 
 upcLaunch.innerHTML = fillUpcL;
 };
