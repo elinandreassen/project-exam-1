@@ -27,6 +27,7 @@ function getPrevLaunches(json) {
               <p><span>Launch Date:</span> ${json[i].launch_date_local}</p>
               <p><span>Launch Site:</span> ${json[i].launch_site.site_name_long}</p>
               <p><span>Payload:</span> ${json[i].rocket.second_stage.payloads[0].payload_type}</p>
+              <a href="${json[i].links.video_link}">Launch Video</a>
             </div>
           </div>`;
     fillPrevL += details;
